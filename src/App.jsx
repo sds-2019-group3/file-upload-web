@@ -1,8 +1,5 @@
 import React from 'react';
-// import logo from './logo.svg';
 import './App.css';
-// import Dropzone from './Dropzone';
-// import FileList from './FileList';
 import Dropzone from 'react-dropzone';
 
 class App extends React.Component {
@@ -47,7 +44,6 @@ class App extends React.Component {
     const { files } = this.state;
     return (
       <div className="App">
-        {/* <header className="App-header"> */}
         <h1>SDS File Upload</h1>
         <Dropzone onDrop={this.handleDrop}>
           {({ getRootProps, getInputProps }) => (
@@ -68,7 +64,6 @@ class App extends React.Component {
             ))}
           </ul>
         </div>
-        {/* </header> */}
       </div>
     );
   }
