@@ -1,0 +1,14 @@
+version: '3'
+services:
+  user:
+    image: samchatfield/sds-upload-app
+    networks:
+      - sds
+    labels:
+      - "traefik.docker.network=sds"
+      - "traefik.frontend.rule=PathPrefixStrip:/upload"
+      - "traefik.port=80"
+    restart: always
+networks:
+  sds:
+    external: true
