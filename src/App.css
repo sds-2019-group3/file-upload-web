@@ -23,3 +23,7 @@
 .FileList {
   margin: 2vmin;
 }
+
+.FileList .icon {
+  cursor: pointer;
+}
