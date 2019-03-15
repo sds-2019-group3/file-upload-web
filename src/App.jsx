@@ -18,7 +18,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    fetch('http://sds.samchatfield.com/api/user/1234567/files')
+    fetch('/api/user/1234567/files')
       .then(response => response.json())
       .then(data => this.setState({ files: data }));
   }
@@ -32,7 +32,7 @@ class App extends React.Component {
       formData.append('file', file);
     });
 
-    fetch('http://sds.samchatfield.com/api/user/1234567/files', {
+    fetch('/api/user/1234567/files', {
       method: 'POST',
       body: formData,
     })
@@ -49,7 +49,7 @@ class App extends React.Component {
     console.log('Handle Delete');
     console.log(`Delete file ${fileId}`);
 
-    fetch(`http://sds.samchatfield.com/api/user/1234567/files/${fileId}`, {
+    fetch(`/api/user/1234567/files/${fileId}`, {
       method: 'DELETE',
     })
       .then(response => response.json())
@@ -88,7 +88,7 @@ class App extends React.Component {
                 // className="list-group-item list-group-item-action"
                 target="_blank"
                 rel="noopener noreferrer"
-                href={`http://sds.samchatfield.com${file.path}`}
+                href={`${file.path}`}
               >
                 {file.name}
               </a>
