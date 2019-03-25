@@ -27,7 +27,7 @@ class App extends React.Component {
   componentDidMount() {
     const { userId } = this.state;
 
-    fetch(`http://localhost/api/user/${userId}/files`)
+    fetch(`/api/user/${userId}/files`)
       .then(response => response.json())
       .then(data => this.setState({ files: data }));
   }
@@ -41,7 +41,7 @@ class App extends React.Component {
 
     const { userId } = this.state;
 
-    fetch(`http://localhost/api/user/${userId}/files`, {
+    fetch(`/api/user/${userId}/files`, {
       method: 'POST',
       body: formData,
     })
@@ -57,7 +57,7 @@ class App extends React.Component {
     console.log(`Delete file ${fileId}`);
 
     const { userId } = this.state;
-    fetch(`http://localhost/api/user/${userId}/files/${fileId}`, {
+    fetch(`/api/user/${userId}/files/${fileId}`, {
       method: 'DELETE',
     })
       .then(response => response.json())
@@ -88,7 +88,7 @@ class App extends React.Component {
         userId: userIdValue,
       });
     } else {
-      fetch(`http://localhost/api/user/${userIdValue}/files`)
+      fetch(`/api/user/${userIdValue}/files`)
         .then((response) => {
           if (!response.ok) {
             throw Error(response.statusText);
