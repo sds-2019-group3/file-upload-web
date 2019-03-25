@@ -8,20 +8,26 @@
 }
 
 .Header {
-  margin: 2vmin;
+  margin: 1vmin;
   font-size: calc(10px + 4vmin);
   color: white;
 }
 
+.UserSelect {
+  margin: 1vmin;
+  padding: 2vmin;
+  font-size: calc(10px + 1vmin);
+}
+
 .Dropzone {
-  margin: 2vmin;
+  margin: 1vmin;
   padding: 4vmin;
   text-align: center;
   font-size: calc(10px + 1vmin);
 }
 
 .FileList {
-  margin: 2vmin;
+  margin: 1vmin;
 }
 
 .FileList .icon {
